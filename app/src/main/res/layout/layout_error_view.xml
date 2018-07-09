@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/error_image"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/error_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_standard_normal"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:textColor="#88000000"
+        android:textSize="@dimen/font_x_large"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_standard_large"
+        android:layout_marginLeft="@dimen/margin_standard_large"
+        android:layout_marginTop="@dimen/margin_standard_normal"
+        android:layout_marginEnd="@dimen/margin_standard_large"
+        android:layout_marginRight="@dimen/margin_standard_large"
+        android:background="@color/retry_back_ground"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</merge>

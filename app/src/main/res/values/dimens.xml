@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- font sizes -->
+    <dimen name="font_hulk">64sp</dimen>
+    <dimen name="font_huge">40sp</dimen>
+    <dimen name="font_xxx_larger">32sp</dimen>
+    <dimen name="font_xx_larger">26sp</dimen>
+    <dimen name="font_xx_large">24sp</dimen>
+    <dimen name="font_x_large">22sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_standard">18sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_jerry">8sp</dimen>
+
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_hulk">64dp</dimen>
+    <dimen name="spacing_notification_sender_image">50dp</dimen>
+    <dimen name="spacing_notification_sender_image_content">45dp</dimen>
+    <dimen name="spacing_huge">40dp</dimen>
+    <dimen name="spacing_big">32dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_normal">14dp</dimen>
+    <dimen name="spacing_standard">8dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_smaller">6dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_jerry">2dp</dimen>
+    <dimen name="spacing_jerry_junior">1dp</dimen>
+    <dimen name="spacing_little_jerry">0.5dp</dimen>
+    <dimen name="spacing_big_inverse">-32dp</dimen>
+    <!-- typical sizes of views -->
+    <dimen name="standard_control_height">48dp</dimen>
+
+    <dimen name="standard_tab_indicator_height">2dp</dimen>
+
+
+    <dimen name="margin_root_standard">8dp</dimen>
+    <dimen name="margin_root_control">4dp</dimen>
+
+    <dimen name="padding_standard_big">14dp</dimen>
+    <dimen name="padding_standard">8dp</dimen>
+    <dimen name="padding_control">4dp</dimen>
+    <dimen name="padding_control_half">2dp</dimen>
+    <dimen name="padding_control_half_inverse">-2dp</dimen>
+
+    <dimen name="margin_standard_normal">16dp</dimen>
+    <dimen name="margin_standard_medium">24dp</dimen>
+    <dimen name="margin_standard_large">30dp</dimen>
+
+
+    <dimen name="margin_control">4dp</dimen>
+
+    <dimen name="scrollbar_size">3dp</dimen>
+</resources>
