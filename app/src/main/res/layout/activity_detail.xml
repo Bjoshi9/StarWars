@@ -13,15 +13,116 @@
         android:layout_height="match_parent"
         android:visibility="gone">
 
-        <TextView
-            android:id="@+id/tvName"
+        <LinearLayout
+            android:id="@+id/llName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/spacing_standard"
-            android:textColor="@color/label"
-            android:textSize="@dimen/font_large"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:padding="@dimen/spacing_standard"
+                android:text="Name"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="@dimen/spacing_standard"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llName">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:padding="@dimen/spacing_standard"
+                android:text="Height"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@+id/tvHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="@dimen/spacing_standard"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llHeight">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:padding="@dimen/spacing_standard"
+                android:text="Mass"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@+id/tvMass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="@dimen/spacing_standard"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCreatedOn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llMass">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:padding="@dimen/spacing_standard"
+                android:text="Created On"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:id="@+id/tvCreatedOn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="@dimen/spacing_standard"
+                android:textColor="@color/label"
+                android:textSize="@dimen/font_large" />
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -46,5 +147,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:indeterminateTint="@color/label"
-        android:visibility="visible" />
+        android:visibility="gone" />
 </FrameLayout>
