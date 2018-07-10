@@ -19,10 +19,20 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation('com.squareup.okhttp3:logging-interceptor:3.8.0') {
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group: 'com.squareup.okio', module: 'okio'
+    }
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'de.greenrobot:eventbus:2.4.1'
+    implementation 'androidx.cardview:cardview:1.0.0-beta01'
 }

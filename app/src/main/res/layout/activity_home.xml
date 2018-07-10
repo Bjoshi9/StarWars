@@ -3,19 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/screen_bg"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
-    
+    tools:context=".home.HomeActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
     <com.brijesh.starwars.widget.ErrorView
         android:id="@+id/evHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:ev_errorImage="@drawable/yoda_error_image"
-        app:ev_retryButtonText="RETRY"
+        android:visibility="gone"
+        app:ev_retryButtonText="Retry"
         app:ev_showImage="true"
         app:ev_showRetryButton="true"
         app:ev_showTitle="true"
-        app:ev_title="@string/app_name" />
+        app:ev_retryButtonBackground="@color/screen_bg"
+        app:ev_retryButtonTextColor="@color/label"
+        app:ev_titleColor="@color/label"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/label"
+        android:visibility="gone" />
 
 </FrameLayout>

@@ -3,9 +3,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/screen_bg</item>
+        <item name="colorPrimaryDark">@color/screen_bg</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:textColorPrimary">@color/label</item>
     </style>
 
     <style name="ev_style">

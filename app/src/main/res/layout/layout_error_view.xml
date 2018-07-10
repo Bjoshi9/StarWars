@@ -33,6 +33,7 @@
         android:layout_marginRight="@dimen/margin_standard_large"
         android:background="@color/retry_back_ground"
         android:gravity="center"
+        android:textAllCaps="false"
         android:visibility="gone"
         android:textColor="@android:color/white"
         android:textStyle="bold" />

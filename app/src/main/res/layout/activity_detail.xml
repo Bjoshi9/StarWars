@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    tools:context=".detail.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_standard"
+            android:textColor="@color/label"
+            android:textSize="@dimen/font_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.brijesh.starwars.widget.ErrorView
+        android:id="@+id/evDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:ev_errorImage="@drawable/yoda_error_image"
+        app:ev_retryButtonBackground="@color/screen_bg"
+        app:ev_retryButtonText="Retry"
+        app:ev_retryButtonTextColor="@color/label"
+        app:ev_showImage="true"
+        app:ev_showRetryButton="true"
+        app:ev_showTitle="true"
+        app:ev_titleColor="@color/label" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/label"
+        android:visibility="visible" />
+</FrameLayout>

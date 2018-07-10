@@ -63,7 +63,7 @@ public class ErrorView extends LinearLayout {
             inflater.inflate(R.layout.layout_error_view, this, true);
             setOrientation(VERTICAL);
             setGravity(Gravity.CENTER);
-            setBackgroundColor(getResources().getColor(android.R.color.white));
+            setBackgroundColor(getResources().getColor(R.color.screen_bg));
             setLayoutTransition(new LayoutTransition());
             mErrorImageView = findViewById(R.id.error_image);
             mTitleTextView = findViewById(R.id.error_title);
@@ -80,7 +80,6 @@ public class ErrorView extends LinearLayout {
                 retryButtonText = a.getString(R.styleable.ErrorView_ev_retryButtonText);
                 retryButtonBackground = a.getResourceId(R.styleable.ErrorView_ev_retryButtonBackground, R.color.retry_back_ground);
                 retryButtonTextColor = a.getColor(R.styleable.ErrorView_ev_retryButtonTextColor, getResources().getColor(android.R.color.white));
-
 
                 if (title != null) {
                     setTitle(title);
@@ -123,57 +122,6 @@ public class ErrorView extends LinearLayout {
 
     public void setOnRetryListener(RetryListener listener) {
         mListener = listener;
-    }
-
-    /**
-     * Loads ErrorView configuration from a {@link Config} object.
-     *
-     * @param config configuration to load from
-     */
-    public void setConfig(Config config) {
-        if (config.getImage() != null) {
-            Object image = config.getImage();
-            if (image instanceof Integer) {
-                setImage((int) image);
-            } else if (image instanceof Drawable) {
-                setImage((Drawable) image);
-            } else if (image instanceof Bitmap) {
-                setImage((Bitmap) image);
-            }
-        }
-
-        if (config.getTitle() != null) {
-            setTitle(config.getTitle());
-        }
-
-        if (config.getTitleColor() != 0) {
-            setTitleColor(config.getTitleColor());
-        }
-
-        showRetryButton(config.shouldShowRetryButton());
-        showImage(config.shouldShowImage());
-        showTitle(config.shouldShowTitle());
-        if (config.getRetryButtonText() != null) {
-            setRetryButtonText(config.getRetryButtonText());
-        }
-
-        if (config.getRetryButtonTextColor() != 0) {
-            setRetryButtonTextColor(config.getRetryButtonTextColor());
-        }
-    }
-
-    /**
-     * Returns the current ErrorView configuration.
-     */
-    public Config getConfig() {
-        return Config.create()
-                .image(getImage())
-                .title(getTitle())
-                .titleColor(getTitleColor())
-                .retryVisible(isRetryButtonVisible())
-                .retryText(getRetryButtonText())
-                .retryTextColor(getRetryButtonTextColor())
-                .build();
     }
 
     /**
@@ -357,118 +305,6 @@ public class ErrorView extends LinearLayout {
         return mRetryButton.getVisibility() == VISIBLE;
     }
 
-    public static class Config {
-        private Object mImage;
-        private String mTitle;
-        private int mTitleColor;
-        private boolean mShowRetryButton = true;
-        private boolean mShowImage = true;
-        private boolean mShowTitle = true;
-        private String mRetryButtonText;
-        private int mRetryButtonTextColor;
-
-        public static Builder create() {
-            return new Builder();
-        }
-
-        private Config() {
-            /* empty constructor */
-        }
-
-        public Object getImage() {
-            return mImage;
-        }
-
-        public String getTitle() {
-            return mTitle;
-        }
-
-        public int getTitleColor() {
-            return mTitleColor;
-        }
-
-        public boolean shouldShowRetryButton() {
-            return mShowRetryButton;
-        }
-
-        public boolean shouldShowImage() {
-            return mShowImage;
-        }
-
-        public boolean shouldShowTitle() {
-            return mShowTitle;
-        }
-
-        public String getRetryButtonText() {
-            return mRetryButtonText;
-        }
-
-        public int getRetryButtonTextColor() {
-            return mRetryButtonTextColor;
-        }
-
-        public static class Builder {
-            private Config config;
-
-            private Builder() {
-                config = new Config();
-            }
-
-            public Builder image(int res) {
-                config.mImage = res;
-                return this;
-            }
-
-            public Builder image(Drawable drawable) {
-                config.mImage = drawable;
-                return this;
-            }
-
-            public Builder image(Bitmap bitmap) {
-                config.mImage = bitmap;
-                return this;
-            }
-
-            public Builder title(String title) {
-                config.mTitle = title;
-                return this;
-            }
-
-            public Builder titleColor(int color) {
-                config.mTitleColor = color;
-                return this;
-            }
-
-            public Builder retryVisible(boolean visible) {
-                config.mShowRetryButton = visible;
-                return this;
-            }
-
-            public Builder imageVisible(boolean visible) {
-                config.mShowImage = visible;
-                return this;
-            }
-
-            public Builder titleVisible(boolean visible) {
-                config.mShowTitle = visible;
-                return this;
-            }
-
-            public Builder retryText(String text) {
-                config.mRetryButtonText = text;
-                return this;
-            }
-
-            public Builder retryTextColor(int color) {
-                config.mRetryButtonTextColor = color;
-                return this;
-            }
-
-            public Config build() {
-                return config;
-            }
-        }
-    }
 
     public interface RetryListener {
         void onRetry();
